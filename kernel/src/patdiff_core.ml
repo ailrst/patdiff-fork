@@ -532,7 +532,7 @@ module Make (Output_impls : Output_impls) = struct
     let collapse = collapse ~rule_prev ~rule_next ~output in
     let () =
       match output with
-      | Ansi | Html -> ()
+      | Ansi | Html | LaTeX -> ()
       | Ascii ->
         if produce_unified_lines
         then failwith "produce_unified_lines is not supported in Ascii mode"
@@ -837,6 +837,7 @@ module Without_unix = Make (struct
       | Ansi -> (module Ansi_output)
       | Ascii -> (module Ascii_output)
       | Html -> (module Html_output.Without_mtime)
+      | LaTeX -> (module Latex_output)
     ;;
   end)
 

@@ -7,6 +7,7 @@ include Private.Make (struct
       | Ansi -> (module Patdiff_kernel.Ansi_output)
       | Ascii -> (module Patdiff_kernel.Ascii_output)
       | Html -> (module Html_output)
+      | LaTeX -> (module Patdiff_kernel.Latex_output)
     ;;
 
     let console_width () =

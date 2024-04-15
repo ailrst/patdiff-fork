@@ -26,6 +26,7 @@ module type Output = sig
     | Ansi
     | Ascii
     | Html
+    | LaTeX 
   [@@deriving compare, sexp]
 
   val implies_unrefined : t -> bool

@@ -9,6 +9,7 @@ module File_name = File_name
 module Float_tolerance = Float_tolerance
 module Format = Format
 module Html_output = Html_output
+module Latex_output = Latex_output
 module Hunks = Hunks
 module Import = Import
 module Is_binary = Is_binary
