@@ -281,6 +281,11 @@ let command =
                | true -> Some (Some Output.Ansi)
                | _ -> None)
              (flag "ansi" no_arg ~doc:" Output in ASCII with ANSI escape codes")
+         ; map
+             ~f:(function
+               | true -> Some (Some Output.LaTeX)
+               | _ -> None)
+             (flag "latex" no_arg ~doc:" Output in Latex")
          ]
          ~if_nothing_chosen:(Default_to None)
      and produce_unified_lines_opt =
